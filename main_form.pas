@@ -1,3 +1,5 @@
+{ -*- mode: delphi -*- }
+
 unit main_form;
 
 {$mode objfpc}{$H+}
@@ -111,7 +113,7 @@ implementation
 
 {$R *.lfm}
 
-uses Math, Mollweide;
+uses Math, Mollweide, cfitsio;
 
 procedure THPViewForm.MollweidePaintBoxPaint(Sender: TObject);
 var
@@ -264,7 +266,7 @@ procedure THPViewForm.FileSaveAsExecute(Sender: TObject);
 begin
     if SaveDialog.Execute then
     begin
-       WriteHealpixMap(SaveDialog.FileName, Map);
+       WriteHealpixMap(SaveDialog.FileName, Map, FitsTypeDouble);
     end;
 end;
 
@@ -424,4 +426,3 @@ begin
 end;
 
 end.
-
