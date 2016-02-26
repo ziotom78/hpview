@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="hpview"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <CommandLineParams Value="/home/tomasi/work/test_data/masks/mask_g60+ps+wmap75_30GHz_1024.fits.gz"/>
+        <LaunchingApplication PathPlusParams="/usr/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="9">
+      <Unit0>
+        <Filename Value="hpview.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="hpview"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="main_form.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="HPViewForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="main_form"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="paintmap.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PaintMap"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="palettes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Palettes"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="columnpicker.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ColumnPickerDialog"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ColumnPicker"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="scanfits.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ScanFits"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="fileinfodlg.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FileInformation"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="fileinfodlg"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="gnomviewwindow.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="GnomonicView"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="GnomViewWindow"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="gnomproj.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GnomProj"/>
+      </Unit8>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="hpview"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <CStyleOperator Value="False"/>
+        <AllowLabel Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <Checks>
+        <RangeChecks Value="True"/>
+      </Checks>
+    </CodeGeneration>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="4">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EFitsError"/>
+      </Item4>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

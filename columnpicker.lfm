@@ -1,0 +1,120 @@
+object ColumnPickerDialog: TColumnPickerDialog
+  Left = 888
+  Height = 354
+  Top = 313
+  Width = 546
+  BorderStyle = bsDialog
+  Caption = 'Select HDU and column'
+  ClientHeight = 354
+  ClientWidth = 546
+  Position = poDefault
+  ShowInTaskBar = stNever
+  LCLVersion = '1.0.10.0'
+  object ClientPanel: TPanel
+    Left = 0
+    Height = 300
+    Top = 0
+    Width = 546
+    Align = alClient
+    BevelOuter = bvSpace
+    BevelWidth = 8
+    ClientHeight = 300
+    ClientWidth = 546
+    TabOrder = 0
+    object HduPanel: TPanel
+      Left = 8
+      Height = 284
+      Top = 8
+      Width = 208
+      Align = alLeft
+      BevelOuter = bvSpace
+      BevelWidth = 4
+      ClientHeight = 284
+      ClientWidth = 208
+      TabOrder = 0
+      object HduLabel: TLabel
+        Left = 4
+        Height = 16
+        Top = 4
+        Width = 200
+        Align = alTop
+        Caption = '&HDUs'
+        ParentColor = False
+      end
+      object HduListBox: TListBox
+        Left = 9
+        Height = 260
+        Hint = 'List of HDUs available in the file'
+        Top = 20
+        Width = 195
+        Align = alClient
+        ItemHeight = 0
+        OnClick = HduListBoxClick
+        ScrollWidth = 193
+        TabOrder = 0
+        TopIndex = -1
+      end
+      object Splitter1: TSplitter
+        Left = 4
+        Height = 260
+        Top = 20
+        Width = 5
+      end
+    end
+    object ColumnPanel: TPanel
+      Left = 221
+      Height = 284
+      Top = 8
+      Width = 317
+      Align = alClient
+      BevelOuter = bvSpace
+      BevelWidth = 4
+      ClientHeight = 284
+      ClientWidth = 317
+      TabOrder = 1
+      object ColumnLabel: TLabel
+        Left = 4
+        Height = 16
+        Top = 4
+        Width = 309
+        Align = alTop
+        Caption = '&Columns'
+        ParentColor = False
+      end
+      object ColumnListBox: TListBox
+        Left = 4
+        Height = 260
+        Hint = 'Pick one of the columns and press "Ok" to show a Healpix projection of the data in that column'
+        Top = 20
+        Width = 309
+        Align = alClient
+        ItemHeight = 0
+        ScrollWidth = 307
+        TabOrder = 0
+        TopIndex = -1
+      end
+    end
+    object Splitter2: TSplitter
+      Left = 216
+      Height = 284
+      Top = 8
+      Width = 5
+    end
+  end
+  object ButtonPanel: TButtonPanel
+    Left = 6
+    Height = 42
+    Top = 306
+    Width = 534
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel]
+  end
+end

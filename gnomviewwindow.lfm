@@ -1,0 +1,166 @@
+object GnomonicView: TGnomonicView
+  Left = 254
+  Height = 420
+  Top = 147
+  Width = 381
+  Caption = 'Gnomonic view'
+  ClientHeight = 420
+  ClientWidth = 381
+  OnCreate = FormCreate
+  Position = poDefault
+  LCLVersion = '1.0.10.0'
+  object GnomViewPanel: TPanel
+    Left = 0
+    Height = 356
+    Top = 0
+    Width = 381
+    Align = alClient
+    BevelOuter = bvSpace
+    BevelWidth = 8
+    ClientHeight = 356
+    ClientWidth = 381
+    TabOrder = 0
+    object AngularSizeTrackbar: TTrackBar
+      Left = 334
+      Height = 304
+      Top = 8
+      Width = 39
+      Max = 600
+      Min = 1
+      OnChange = AngularSizeTrackbarChange
+      Orientation = trVertical
+      Position = 1
+      ScalePos = trRight
+      Align = alRight
+      Constraints.MinWidth = 35
+      TabOrder = 0
+    end
+    object GnomViewPaintBox: TPaintBox
+      Left = 8
+      Height = 304
+      Top = 8
+      Width = 326
+      Align = alClient
+      OnMouseMove = GnomViewPaintBoxMouseMove
+      OnPaint = GnomViewPaintBoxPaint
+    end
+    object CenterPointPanel: TPanel
+      Left = 8
+      Height = 28
+      Top = 320
+      Width = 365
+      Align = alBottom
+      AutoSize = True
+      BorderSpacing.Top = 8
+      BevelOuter = bvSpace
+      BevelWidth = 4
+      ClientHeight = 28
+      ClientWidth = 365
+      TabOrder = 1
+      object ColatLabel: TLabel
+        AnchorSideTop.Control = CenterColatEdit
+        AnchorSideTop.Side = asrCenter
+        Left = 1
+        Height = 16
+        Top = 3
+        Width = 87
+        Caption = '&Colat. (θ, deg)'
+        ParentColor = False
+      end
+      object CenterColatEdit: TEdit
+        AnchorSideLeft.Control = ColatLabel
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = ColatLabel
+        AnchorSideTop.Side = asrCenter
+        Left = 88
+        Height = 25
+        Top = -1
+        Width = 80
+        Anchors = [akLeft]
+        OnChange = CenterColatEditChange
+        OnEditingDone = CenterColatEditEditingDone
+        TabOrder = 0
+        Text = 'CenterColatEdit'
+      end
+      object LongLabel: TLabel
+        AnchorSideLeft.Control = CenterColatEdit
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = CenterLongEdit
+        AnchorSideTop.Side = asrCenter
+        AnchorSideRight.Control = CenterLongEdit
+        Left = 176
+        Height = 16
+        Top = 3
+        Width = 23
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 8
+        Caption = '&Long. (φ, deg)'
+        ParentColor = False
+      end
+      object CenterLongEdit: TEdit
+        AnchorSideTop.Control = LongLabel
+        AnchorSideTop.Side = asrCenter
+        Left = 199
+        Height = 25
+        Top = -1
+        Width = 80
+        Anchors = [akLeft]
+        OnChange = CenterLongEditChange
+        OnEditingDone = CenterLongEditEditingDone
+        TabOrder = 1
+        Text = 'CenterLongEdit'
+      end
+    end
+  end
+  object CBPanel: TPanel
+    Left = 0
+    Height = 41
+    Top = 356
+    Width = 381
+    Align = alBottom
+    AutoSize = True
+    BorderSpacing.InnerBorder = 4
+    BevelOuter = bvSpace
+    BevelWidth = 4
+    ClientHeight = 41
+    ClientWidth = 381
+    TabOrder = 1
+    object CBMinLabel: TLabel
+      Left = 4
+      Height = 25
+      Top = 4
+      Width = 70
+      Align = alLeft
+      AutoSize = False
+      Caption = 'CBMinLabel'
+      Constraints.MaxHeight = 25
+      ParentColor = False
+    end
+    object CBPaintBox: TPaintBox
+      Left = 74
+      Height = 25
+      Top = 4
+      Width = 230
+      Align = alClient
+      Constraints.MaxHeight = 25
+    end
+    object CBMaxLabel: TLabel
+      Left = 304
+      Height = 25
+      Top = 4
+      Width = 73
+      Align = alRight
+      AutoSize = False
+      Caption = 'CBMaxLabel'
+      Constraints.MaxHeight = 25
+      ParentColor = False
+    end
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 397
+    Width = 381
+    Panels = <>
+  end
+end
