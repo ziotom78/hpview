@@ -20,4 +20,4 @@ The program has been compiled and used on the following platforms:
 
 ## Screenshots
 
-[hpview_screenshot](./hpview_screenshot.png)
+![hpview_screenshot](./hpview_screenshot.png)
