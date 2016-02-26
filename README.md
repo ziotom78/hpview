@@ -8,10 +8,14 @@ Pascal](http://www.freepascal.org/) and
 
 Only [cfitsio](http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html) is
 required. The program implements its own Healpix projection routines.
-Simply put `cfitsio.lib` in the source directory and compile using
-Lazarus:
+
+Compile the program using Lazarus:
 
     lazbuild hpview.lpr
+
+(under Windows, you have to download a precompiled binary from
+http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html and put `cfitsio.lib`
+in the source directory.)
 
 The program has been compiled and used on the following platforms:
 
