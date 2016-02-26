@@ -18,3 +18,6 @@ The program has been compiled and used on the following platforms:
 - Linux Mint 17.2 64-bit (using Gtk+)
 - Windows 7 64-bit
 
+## Screenshots
+
+[hpview_screenshot](./hpview_screenshot.png)
