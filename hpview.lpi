@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
     <Version Value="9"/>
@@ -27,7 +27,6 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
-        <CommandLineParams Value="/home/tomasi/work/test_data/masks/mask_g60+ps+wmap75_30GHz_1024.fits.gz"/>
         <LaunchingApplication PathPlusParams="/usr/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
       </local>
     </RunParams>
@@ -40,7 +39,6 @@
       <Unit0>
         <Filename Value="hpview.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="hpview"/>
       </Unit0>
       <Unit1>
         <Filename Value="main_form.pas"/>
@@ -48,7 +46,6 @@
         <ComponentName Value="HPViewForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="main_form"/>
       </Unit1>
       <Unit2>
         <Filename Value="paintmap.pas"/>
@@ -77,7 +74,6 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FileInformation"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fileinfodlg"/>
       </Unit6>
       <Unit7>
         <Filename Value="gnomviewwindow.pas"/>
@@ -121,12 +117,6 @@
         </Win32>
       </Options>
     </Linking>
-    <Other>
-      <CompilerMessages>
-        <MsgFileName Value=""/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="4">

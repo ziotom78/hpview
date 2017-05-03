@@ -24,7 +24,9 @@ function MapValueToColor(const Palette : TPalette;
                          const Range : TValueRange;
                          Value: Real): TColor; inline;
 begin
-    if IsNan(Value) or (Value < -1.6e+30) then
+    if IsNan(Value)
+       or (Value < -1.6e+30)
+       or (Range.MaxValue = Range.MinValue) then
         Result := clBackground
     else
         Result := LevelToColor(Palette,

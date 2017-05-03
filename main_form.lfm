@@ -4,28 +4,28 @@ object HPViewForm: THPViewForm
   Top = 256
   Width = 631
   Caption = 'Healpix Viewer'
-  ClientHeight = 558
+  ClientHeight = 554
   ClientWidth = 631
   Menu = MainMenu
   OnShow = FormShow
-  LCLVersion = '1.0.10.0'
+  LCLVersion = '1.6.2.0'
   object MainStatusBar: TStatusBar
     Left = 0
-    Height = 23
-    Top = 535
+    Height = 29
+    Top = 525
     Width = 631
     Panels = <>
   end
   object ColorBarPanel: TPanel
     Left = 0
-    Height = 33
-    Top = 502
+    Height = 36
+    Top = 489
     Width = 631
     Align = alBottom
     AutoSize = True
     BevelOuter = bvSpace
     BevelWidth = 4
-    ClientHeight = 33
+    ClientHeight = 36
     ClientWidth = 631
     TabOrder = 1
     object ColorBarPaintBox: TPaintBox
@@ -41,18 +41,18 @@ object HPViewForm: THPViewForm
     end
     object MinPanel: TPanel
       Left = 4
-      Height = 25
+      Height = 28
       Top = 4
       Width = 127
       Align = alLeft
       AutoSize = True
       BevelOuter = bvNone
-      ClientHeight = 25
+      ClientHeight = 28
       ClientWidth = 127
       TabOrder = 0
       object MinValueEdit: TEdit
         Left = 0
-        Height = 25
+        Height = 28
         Top = 0
         Width = 120
         Align = alLeft
@@ -65,7 +65,7 @@ object HPViewForm: THPViewForm
         AnchorSideTop.Control = MinValueEdit
         AnchorSideTop.Side = asrCenter
         Left = 120
-        Height = 16
+        Height = 20
         Top = 4
         Width = 7
         Caption = '?'
@@ -74,13 +74,13 @@ object HPViewForm: THPViewForm
     end
     object MaxPanel: TPanel
       Left = 500
-      Height = 25
+      Height = 28
       Top = 4
       Width = 127
       Align = alRight
       AutoSize = True
       BevelOuter = bvNone
-      ClientHeight = 25
+      ClientHeight = 28
       ClientWidth = 127
       TabOrder = 1
       object MaxUnitLabel: TLabel
@@ -90,7 +90,7 @@ object HPViewForm: THPViewForm
         AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = MaxValueEdit
         Left = 120
-        Height = 16
+        Height = 20
         Top = 4
         Width = 7
         Caption = '?'
@@ -98,7 +98,7 @@ object HPViewForm: THPViewForm
       end
       object MaxValueEdit: TEdit
         Left = 0
-        Height = 25
+        Height = 28
         Top = 0
         Width = 120
         Align = alLeft
@@ -109,19 +109,19 @@ object HPViewForm: THPViewForm
   end
   object MollweidePanel: TPanel
     Left = 0
-    Height = 502
+    Height = 489
     Top = 0
     Width = 631
     Align = alClient
     BevelOuter = bvSpace
     BevelWidth = 4
     Caption = 'MollweidePanel'
-    ClientHeight = 502
+    ClientHeight = 489
     ClientWidth = 631
     TabOrder = 2
     object MollweidePaintBox: TPaintBox
       Left = 4
-      Height = 494
+      Height = 481
       Top = 4
       Width = 623
       Align = alClient

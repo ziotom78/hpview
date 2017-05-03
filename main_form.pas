@@ -327,6 +327,8 @@ var
     PixIndex : Cardinal;
 
 begin
+    if ShowNeverCalled then exit;
+
     Mollweide.XYToUV(Point(X - (MollweidePaintBox.Width - MapBitmap.Width) div 2,
                            Y - (MollweidePaintBox.Height - MapBitmap.Height) div 2),
                      Point(MapBitmap.Width div 2, MapBitmap.Height div 2),
@@ -367,8 +369,6 @@ end;
 
 constructor THPViewForm.Create(APArent : TComponent);
 begin
-    inherited Create(AParent);
-
     InitMap(1, Ring, Map);
     PixelRange.MinValue := 0.0;
     PixelRange.MaxValue := 0.0;
@@ -378,6 +378,8 @@ begin
     MapBitmap := TBitmap.Create;
     DirtyBitmapFlag := True;
     ShowNeverCalled := True;
+
+    inherited Create(AParent);
 end;
 
 destructor THPViewForm.Destroy;
